@@ -5,7 +5,7 @@
     <key>io.flutter.embedded_views_preview</key>
     <true/>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>We need your location to show maps</string>
+    <string>We need your location to show maps to provide the most accurate and enhanced mapping experience</string>
     <key>NSLocationAlwaysUsageDescription</key>
     <string>We require access to your location at all times to provide the most accurate and enhanced mapping experience</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
