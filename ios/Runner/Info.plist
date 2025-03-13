@@ -33,7 +33,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUsageDescription</key>
-	<string>This app need access to location when open</string>
+	<string>This app need access to location when open to provide the most accurate and enhanced experience</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
