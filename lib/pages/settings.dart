@@ -12,7 +12,7 @@ class Settings extends StatefulWidget {
 
 class _SettingsState extends State<Settings> {
   final Uri _url = Uri.parse(
-    'https://www.termsfeed.com/live/5c53fe36-b8f3-4ea1-893b-2cdbb83cdffa',
+    'https://www.termsfeed.com/live/cb88e990-77ca-437c-9de7-89823f2c81b8',
   );
 
   Future<void> _launchUrl() async {
