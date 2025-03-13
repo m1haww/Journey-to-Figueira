@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:journey_to_figueira/pages/base.dart';
+import 'package:journey_to_figueira/utils/base.dart';
 import 'package:journey_to_figueira/utils/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -40,27 +39,27 @@ class _SettingsState extends State<Settings> {
           ),
           body: SafeArea(
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: EdgeInsets.all(width * 0.07),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   buildHeight(context, 0.02),
                   buildContainerSettings(
                     context,
-                    "Terms of services",
-                    Icon(Icons.account_balance_rounded),
+                    "Terms of Services",
+                    Icons.description, // 📜 Icon schimbat
                   ),
                   buildHeight(context, 0.02),
                   buildContainerSettings(
                     context,
-                    "Developer website",
-                    Icon(Icons.account_balance_rounded),
+                    "Developer Website",
+                    Icons.public, // 🌍 Icon schimbat
                   ),
                   buildHeight(context, 0.02),
                   buildContainerSettings(
                     context,
-                    "Terms of use ",
-                    Icon(Icons.account_balance_rounded),
+                    "Terms of Use",
+                    Icons.gavel, // ⚖️ Icon schimbat
                   ),
                 ],
               ),
@@ -71,7 +70,11 @@ class _SettingsState extends State<Settings> {
     );
   }
 
-  Widget buildContainerSettings(BuildContext context, String text, Icon icon) {
+  Widget buildContainerSettings(
+    BuildContext context,
+    String text,
+    IconData icon,
+  ) {
     final height = MediaQuery.of(context).size.height;
 
     return GestureDetector(
@@ -97,7 +100,7 @@ class _SettingsState extends State<Settings> {
                 ),
               ),
               Spacer(),
-              Icon(icon.icon, color: kGold, size: 30),
+              Icon(icon, color: kGold, size: 30), // Icoanele schimbate
             ],
           ),
         ),
