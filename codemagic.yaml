@@ -10,7 +10,7 @@ workflows:
         distribution_type: app_store
         bundle_identifier: com.journey.to.figueira
       vars:
-        APP_ID: 6743863933
+        APP_ID: 6743932844
       flutter: stable
       xcode: latest
       cocoapods: default
