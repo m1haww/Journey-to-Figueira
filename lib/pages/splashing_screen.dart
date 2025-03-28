@@ -44,7 +44,7 @@ class _SplashingScreenState extends State<SplashingScreen> {
                   );
                 },
                 child: Text(
-                  "Journey \n of \n Figueira",
+                  "Journey \n to \n Figueira",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 40,

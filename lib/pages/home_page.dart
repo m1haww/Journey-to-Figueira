@@ -33,11 +33,7 @@ class _HomePageState extends State<HomePage> {
           ),
           body: SafeArea(
             child: Padding(
-              padding: EdgeInsets.only(
-                left: width * 0.07,
-                right: width * 0.07,
-                bottom: width * 0.07,
-              ),
+              padding: EdgeInsets.only(left: width * 0.07, right: width * 0.07),
               child: ListView.builder(
                 itemCount: restaurants.length,
                 itemBuilder: (context, index) {

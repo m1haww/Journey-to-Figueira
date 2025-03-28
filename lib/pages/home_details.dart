@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:journey_to_figueira/food_page.dart';
 import 'package:journey_to_figueira/utils/base.dart';
 import 'package:journey_to_figueira/pages/book_page.dart';
 import 'package:journey_to_figueira/utils/classes.dart';
@@ -111,9 +112,63 @@ class _HomeDetailsState extends State<HomeDetails> {
                           ),
                         ),
                         buildHeight(context, 0.04),
+                        SizedBox(
+                          height: 250, // Set height for the horizontal list
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: widget.restaurant.menu.length,
+                            itemBuilder: (context, index) {
+                              final food = widget.restaurant.menu[index];
+                              return Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          CupertinoPageRoute(
+                                            builder:
+                                                (context) =>
+                                                    FoodPage(food: food),
+                                          ),
+                                        );
+                                      },
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(40),
+                                        child: Image.asset(
+                                          food.image,
+                                          height: height * 0.2,
+                                          width: width * 0.4,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(height: 10),
+                                    Text(
+                                      food.name,
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      '\$${food.price}',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.white70,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                        buildHeight(context, 0.04),
 
-                        // You could add buttons or more UI elements below
-                        // E.g., a 'Book Now' button, etc.
                         buildcenter(context, () {
                           Navigator.push(
                             context,
